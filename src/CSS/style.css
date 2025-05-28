@@ -34,7 +34,7 @@ header nav li a{
 }
 
 header nav li a:hover{
-    color: #fbffd6;
+    color: white;
     transform: scale(1.2);
 }
 
@@ -42,6 +42,7 @@ header nav li a:hover{
     font-family: "Inter", sans-serif;
     color: #7EBAFF;
     font-size: 26px;
+    font-weight: bolder;
 }
 
 #mark{
@@ -52,4 +53,19 @@ header nav li a:hover{
     color: white;
     font-family: "Inter", sans-serif;
     font-size: 20px;
+}
+
+main{
+    height: 84vh;
+    padding: 50px;
+}
+
+footer{
+    padding: 20.5px;
+    background: #7EBAFF;
+}
+
+footer p{
+    color: white;
+    font-family: "Inter", sans-serif;
 }
