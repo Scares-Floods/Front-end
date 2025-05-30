@@ -57,7 +57,7 @@ header nav li a:hover{
 
 
 .carousel {
-    height: 80vh;
+    height: 87vh;
     margin-top: 10px;
     background-size: cover;
     background-position: center;
@@ -104,6 +104,118 @@ header nav li a:hover{
   
 .right {
     right: 10px;
+}
+
+#projeto-container{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10% 5%;
+}
+
+#projeto-container h1{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 5% 5% 0%;
+}
+
+#projeto-conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#projeto-conteudo p{
+    flex: 2;
+    margin: 5%;
+    text-align: left;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+#projeto-conteudo img{
+    flex: 2;
+    border-radius: 5px;
+}
+
+.secao-direita{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10% 5%;
+}
+
+.secao-direita h1{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 5% 5% 0%; 
+}
+
+#secao-direita3{
+    background-color: white;
+    color: black;
+}
+
+#secao-direita5{
+    background-color: #7EBAFF;
+    color: black;
+}
+
+.secao-esquerda{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10% 5%;
+}
+
+.secao-esquerda h1{
+        font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 5% 5% 0%; 
+}
+
+#secao-esquerda6{
+    background-color: white;
+    color: black;
+}
+
+.secao-conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.secao-conteudo p{
+    flex: 2;
+    margin: 5%;
+    text-align: left;
+    font-family: sans-serif;
+    line-height: 1.8;
+}
+
+.secao-conteudo img{
+    flex: 2;
+    border-radius: 5px;
 }
 
 footer{
