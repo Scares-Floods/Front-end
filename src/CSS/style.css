@@ -56,52 +56,54 @@ header nav li a:hover{
 }
 
 
-.carrossel-container {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background-color: black;
+.carousel {
+    height: 80vh;
+    margin-top: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out;
 }
   
-.carrossel {
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
     display: flex;
-    transition: transform 0.5s ease-in-out;
+}
+
+#overlay-text-border{
+    padding: 28% 10%;
+    border-left: 1px solid white;
 }
   
-.carrossel-item {
-    min-width: 100%;
-    height: fit-content;
-    text-align: center;
-}
-  
-.carrossel-item img {
-    height: 90%;
-    width: 100%;
-}
-  
-.controle-lateral {
+.overlay h1 {
     color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+
+}
+  
+/* Arrows */
+.arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
     border: none;
-    padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    background: none;
-    transition: background 0.8s;
+    padding: 10px 15px;
+    z-index: 10;
 }
   
-.controle-lateral:hover {
-    transition: 0.8s;
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-} 
+.left {
+    left: 10px;
+}
   
-.description{
-    font-size: 1.5rem;
-    font-family: "Outfit", sans-serif;
-    color: #CCC;
+.right {
+    right: 10px;
 }
 
 footer{

@@ -1,19 +1,33 @@
-let indice = 0;
-    const carrossel = document.getElementById("carrossel");
-    const total = document.querySelectorAll(".carrossel-item").length;
+const carousel = document.getElementById('carousel');
 
-    function atualizarCarrossel() {
-      carrossel.style.transform = `translateX(-${indice * 100}%)`;
-    }
+// Imagens de fundo
+const backgrounds = [
+  'url(../../src/assets/enchente1.jpg)',
+  'url(../../src/assets/enchente2.jpg)',
+  'url(../../src/assets/enchente3.jpg)'
+];
 
-    function proximo() {
-      indice = (indice + 1) % total;
-      atualizarCarrossel();
-    }
+let current = 0;
 
-    function anterior() {
-      indice = (indice - 1 + total) % total;
-      atualizarCarrossel();
-    }
+// Função para mostrar slide atual
+function showSlide(index) {
+  carousel.style.backgroundImage = backgrounds[index];
+}
 
-    setInterval(proximo, 2000);
+// Proximo slide
+function nextSlide() {
+  current = (current + 1) % backgrounds.length;
+  showSlide(current);
+}
+
+// Slide anterior
+function prevSlide() {
+  current = (current - 1 + backgrounds.length) % backgrounds.length;
+  showSlide(current);
+}
+
+// Mudar automaticamente a cada 5 segundos
+setInterval(nextSlide, 5000);
+
+// Mostrar o primeiro slide ao carregar
+showSlide(current);
