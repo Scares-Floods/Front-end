@@ -73,7 +73,6 @@ header nav li a:hover{
 
 #overlay-text-border{
     padding: 28% 10%;
-    border-left: 1px solid white;
 }
   
 .overlay h1 {
@@ -81,7 +80,12 @@ header nav li a:hover{
     font-family: "Inter", sans-serif;
     font-size: 4rem;
     font-weight: bold;
+}
 
+.overlay p{
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem
 }
   
 /* Arrows */
@@ -122,7 +126,7 @@ header nav li a:hover{
     font-size: 46px;
     font-weight: bolder;
     justify-content: center;
-    padding: 5% 5% 0%;
+    padding: 5% 5% 2%;
 }
 
 #projeto-conteudo{
@@ -161,7 +165,7 @@ header nav li a:hover{
     font-size: 46px;
     font-weight: bolder;
     justify-content: center;
-    padding: 5% 5% 0%; 
+    padding: 5% 5% 2%; 
 }
 
 #secao-direita3{
@@ -184,12 +188,12 @@ header nav li a:hover{
 }
 
 .secao-esquerda h1{
-        font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     text-transform: uppercase;
     font-size: 46px;
     font-weight: bolder;
     justify-content: center;
-    padding: 5% 5% 0%; 
+    padding: 5% 5% 2%; 
 }
 
 #secao-esquerda6{
@@ -218,6 +222,60 @@ header nav li a:hover{
     border-radius: 5px;
 }
 
+
+/* Cards */
+#container-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+}
+
+#ferramentas-titulo{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size: 46px;
+    margin-bottom: 5%;
+}
+
+#secao-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: black;
+    width: 20%;
+    height: 600px;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card h1{
+    color: black;
+    font-family: "Inter", sans-serif;
+    padding: 10%;
+}
+
+.card p{
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+/* Rodapé */
 footer{
     padding: 20.5px;
     background: #7EBAFF;
