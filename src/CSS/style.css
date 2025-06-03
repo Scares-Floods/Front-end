@@ -8,6 +8,8 @@
 
 body{
     background: #015486;
+    color: white; /* Definindo uma cor padrão para o texto no body, se necessário */
+    font-family: "Inter", sans-serif; /* Definindo a fonte padrão para o corpo */
 }
 
 header{
@@ -56,6 +58,32 @@ header nav li a:hover{
 }
 
 
+
+/* Estilo específico para o H1 dentro do main na página do mapa */
+main h1 {
+    font-family: "Inter", sans-serif;
+    color: white; /* Cor do título, ajusta bem com o fundo azul */
+    font-size: 32px; /* Tamanho do título da página do mapa */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px; /* Espaçamento abaixo do título, antes do mapa */
+}
+
+/* Estilos para o contêiner do MAPA */
+#map {
+    height: 65vh;   /* Altura do mapa (65% da altura da viewport) - ajuste conforme necessário */
+    /* Ou uma altura fixa, ex: height: 500px; */
+    width: 100%;    /* Largura do mapa (100% do contêiner pai 'main') */
+    max-width: 1200px; /* Largura máxima para o mapa, para não ficar excessivamente largo em telas grandes */
+    margin: 0 auto 20px auto; /* Centraliza o mapa na horizontal e adiciona margem inferior */
+    border: 3px solid #7EBAFF; /* Borda para destacar o mapa, combinando com o tema */
+    border-radius: 8px; /* Cantos arredondados para o mapa */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+
+
+/* ---- DEMAIS ESTILOS EXISTENTES ---- */
+
 .carousel {
     height: 87vh;
     margin-top: 2px;
@@ -64,7 +92,7 @@ header nav li a:hover{
     position: relative;
     transition: background-image 1s ease-in-out;
 }
-  
+ 
 .overlay {
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
@@ -74,7 +102,7 @@ header nav li a:hover{
 #overlay-text-border{
     padding: 28% 10%;
 }
-  
+ 
 .overlay h1 {
     color: white;
     font-family: "Inter", sans-serif;
@@ -87,7 +115,7 @@ header nav li a:hover{
     font-family: "Inter", sans-serif;
     font-size: 1.4rem
 }
-  
+ 
 /* Arrows */
 .arrow {
     position: absolute;
@@ -101,11 +129,11 @@ header nav li a:hover{
     padding: 10px 15px;
     z-index: 10;
 }
-  
+ 
 .left {
     left: 10px;
 }
-  
+ 
 .right {
     right: 10px;
 }
@@ -127,6 +155,7 @@ header nav li a:hover{
     font-weight: bolder;
     justify-content: center;
     padding: 5% 5% 2%;
+    color: black; /* Garante que o H1 aqui seja preto, pois o padrão do body foi mudado para branco */
 }
 
 #projeto-conteudo{
@@ -141,8 +170,9 @@ header nav li a:hover{
     flex: 2;
     margin: 5%;
     text-align: left;
-    font-family: sans-serif;
+    font-family: sans-serif; /* Inter ou sans-serif aqui? */
     line-height: 1.8;
+    color: black; /* Garante a cor do texto */
 }
 
 #projeto-conteudo img{
@@ -173,10 +203,19 @@ header nav li a:hover{
     color: black;
 }
 
+#secao-direita3 h1, #secao-direita3 p { /* Garante cor do texto em seções com fundo branco */
+    color: black;
+}
+
 #secao-direita5{
     background-color: #7EBAFF;
     color: black;
 }
+
+#secao-direita5 h1, #secao-direita5 p { /* Garante cor do texto nesta seção */
+    color: black;
+}
+
 
 .secao-esquerda{
     color: white;
@@ -201,6 +240,10 @@ header nav li a:hover{
     color: black;
 }
 
+#secao-esquerda6 h1, #secao-esquerda6 p { /* Garante cor do texto em seções com fundo branco */
+    color: black;
+}
+
 .secao-conteudo{
     display: flex;
     flex-direction: row;
@@ -213,8 +256,9 @@ header nav li a:hover{
     flex: 2;
     margin: 5%;
     text-align: left;
-    font-family: sans-serif;
+    font-family: sans-serif; /* Inter ou sans-serif aqui? */
     line-height: 1.8;
+    /* A cor do parágrafo será herdada da seção pai (.secao-esquerda, .secao-direita, etc.) */
 }
 
 .secao-conteudo img{
@@ -242,8 +286,9 @@ header nav li a:hover{
 #secao-cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
+    justify-content: space-between; /* Pode precisar de wrap em telas menores */
+    flex-wrap: wrap; /* Adicionado para melhor responsividade */
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
 .card{
@@ -252,36 +297,59 @@ header nav li a:hover{
     align-items: center;
     background-color: white;
     color: black;
-    width: 20%;
-    height: 600px;
+    /* width: 20%; */ /* Alterado para ser mais responsivo */
+    flex-basis: calc(25% - 20px); /* Base para 4 cards, ajustando pelo gap */
+    min-width: 280px; /* Largura mínima para cada card */
+    height: auto; /* Altura automática para acomodar conteúdo variável */
+    min-height: 600px; /* Mantém uma altura mínima, mas permite expandir */
     padding: 2%;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para os cards */
 }
 
 .card img{
     width: 100%;
+    border-bottom: 1px solid #eee; /* Linha sutil abaixo da imagem */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .card h1{
     color: black;
     font-family: "Inter", sans-serif;
-    padding: 10%;
+    font-size: 1.5rem; /* Ajuste no tamanho do título do card */
+    padding: 5% 5% 8%; /* Ajuste no padding */
+    text-align: center;
 }
 
 .card p{
-    font-size: 18px;
-    font-family: sans-serif;
+    font-size: 16px; /* Tamanho de fonte ligeiramente menor para mais texto */
+    font-family: sans-serif; /* Inter ou sans-serif aqui? */
     text-align: justify;
-    line-height: 1.4;
+    line-height: 1.6; /* Melhor legibilidade */
+    padding: 0 10px 10px; /* Padding para o parágrafo */
+    color: #333; /* Cor de texto mais escura para melhor contraste no branco */
 }
 
 /* Rodapé */
 footer{
     padding: 20.5px;
     background: #7EBAFF;
+    text-align: center; /* Centraliza o texto do rodapé */
 }
 
 footer p{
-    color: white;
+    color: #015486; /* Cor de texto que contrasta bem com o fundo do rodapé */
     font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+#map {
+    height: 65vh;   
+    width: 100%;    
+    max-width: 1200px; 
+    margin: 0 auto 20px auto; 
+    border: 3px solid #7EBAFF; 
+    border-radius: 8px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
 }
