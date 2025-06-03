@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="shortcut icon" href="./src/assets/FloodTit.png">
+    <link rel="shortcut icon" href="../assets/FloodTit.png">
     <title>FloodLess - Quiz</title>
 </head>
 <body>
@@ -20,12 +20,30 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>quiz</h1>
-    </main>
+        <main id="container-quiz">
+            <div class="quiz-container">
+              <h1>questionario</h1>
+              <div id="quiz-content">
+                <div id="question-container" class="hidden">
+                  <div id="question"></div>
+                    <div class="answer-btns" id="answer-buttons"></div>
+                      <button id="next-btn" disabled>Próxima</button>
+                </div>
+                <div id="start-container">
+                  <button id="start-btn">Iniciar Quiz</button>
+                </div>
+                <div id="result-container" class="hidden">
+                  <div id="result"></div>
+                  <button id="restart-btn">Reiniciar Quiz</button>
+                </div>
+              </div>
+            </div>
+            <div id="imagem-canto"></div>
+          </main>
     <footer>
         <p>&copy; 2025 Floodless - Plataforma de Conscientização e Alerta de Enchetes</p>
     </footer>
-    <script src="../JS/script.js"></script>
+    <script src="../JS/quiz.js"></script>
 </body>
 </html>
+ 

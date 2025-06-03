@@ -331,6 +331,221 @@ main h1 {
     color: #333; /* Cor de texto mais escura para melhor contraste no branco */
 }
 
+#container-quiz{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 83.4vh;
+    margin: 0;
+}
+ 
+#imagem-canto{
+    flex: 1;
+    background-color: black;
+    background-image: url(../../src/assets/enchente2.jpg);
+    height: 91vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+ 
+.quiz{
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+ 
+.quiz h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color:black;
+}
+ 
+#container-perguntas h2{
+  color:green;
+  margin-bottom: 20px;
+}
+ 
+#container-respostas{
+    margin-bottom: 20px;
+}
+ 
+#resposta{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+#proximo{
+    background: #3895ff;
+    color:#fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+   
+}
+ 
+#proximo:hover {
+    background-color: whitesmoke;
+}
+ 
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+ 
+#container-resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ 
+#container-resultado h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+ 
+#lista-resultado {
+    list-style: none;
+    padding: 0;
+}
+ 
+#lista-resultado li {
+    margin-bottom: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+ 
+#lista-resultado li:last-child {
+    border-bottom: none;
+}
+ 
+.hidden {
+    display: none;
+}
+ 
+#inicio-btn {
+    background-color: #CCC;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.8s ease;
+}
+ 
+#inicio-btn:hover {
+    background-color: #CCC;
+}
+ 
+.quiz-container {
+    flex: 1;
+    background: none;
+    display: block;
+    justify-content: center;
+    padding: 50px 60px;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+  }
+ 
+  .quiz-container h1 {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+  }
+ 
+  #question {
+    font-family: sans-serif;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    min-height: 60px;
+  }
+ 
+  .answer-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  button.answer {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #7EBAFF;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background 0.6s ease, color 0.6s ease;
+    text-align: left;
+  }
+ 
+  button.answer:hover {
+    background: #3895ff;
+    color: white;
+  }
+ 
+  button#next-btn,
+  button#start-btn,
+  button#restart-btn {
+    margin-top: 25px;
+    background: #3895ff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    transition: background-color 0.8s ease;
+  }
+ 
+  button#next-btn:disabled {
+    background: #7EBAFF;
+    cursor: not-allowed;
+    color: #CCC;
+  }
+ 
+  button#start-btn:hover,
+  button#next-btn:hover:not(:disabled),
+  button#restart-btn:hover {
+    transition: 0.8s;
+    background: #3895ff;
+    color: white;
+  }
+ 
+  #result {
+    font-family: sans-serif;
+    color: #CCC;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  #map {
+    height: 65vh;   
+    width: 100%;    
+    max-width: 1200px; 
+    margin: 0 auto 20px auto; 
+    border: 3px solid #7EBAFF; 
+    border-radius: 8px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
 /* Rodapé */
 footer{
     padding: 20.5px;
@@ -344,12 +559,3 @@ footer p{
     font-size: 14px;
 }
 
-#map {
-    height: 65vh;   
-    width: 100%;    
-    max-width: 1200px; 
-    margin: 0 auto 20px auto; 
-    border: 3px solid #7EBAFF; 
-    border-radius: 8px; 
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
-}
