@@ -58,7 +58,7 @@ header nav li a:hover{
 
 .carousel {
     height: 87vh;
-    margin-top: 10px;
+    margin-top: 2px;
     background-size: cover;
     background-position: center;
     position: relative;
