@@ -8,8 +8,8 @@
 
 body{
     background: #015486;
-    color: white; /* Definindo uma cor padrão para o texto no body, se necessário */
-    font-family: "Inter", sans-serif; /* Definindo a fonte padrão para o corpo */
+    color: white;
+    font-family: "Inter", sans-serif; 
 }
 
 header{
@@ -57,32 +57,24 @@ header nav li a:hover{
     font-size: 20px;
 }
 
-
-
-/* Estilo específico para o H1 dentro do main na página do mapa */
 main h1 {
     font-family: "Inter", sans-serif;
-    color: white; /* Cor do título, ajusta bem com o fundo azul */
-    font-size: 32px; /* Tamanho do título da página do mapa */
+    color: white;
+    font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom: 25px; /* Espaçamento abaixo do título, antes do mapa */
+    margin-bottom: 25px; 
 }
 
-/* Estilos para o contêiner do MAPA */
 #map {
-    height: 65vh;   /* Altura do mapa (65% da altura da viewport) - ajuste conforme necessário */
-    /* Ou uma altura fixa, ex: height: 500px; */
-    width: 100%;    /* Largura do mapa (100% do contêiner pai 'main') */
-    max-width: 1200px; /* Largura máxima para o mapa, para não ficar excessivamente largo em telas grandes */
-    margin: 0 auto 20px auto; /* Centraliza o mapa na horizontal e adiciona margem inferior */
-    border: 3px solid #7EBAFF; /* Borda para destacar o mapa, combinando com o tema */
-    border-radius: 8px; /* Cantos arredondados para o mapa */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+    height: 65vh;
+    width: 100%;    
+    max-width: 1200px; 
+    margin: 0 auto 20px auto; 
+    border: 3px solid #7EBAFF; 
+    border-radius: 8px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
 }
-
-
-/* ---- DEMAIS ESTILOS EXISTENTES ---- */
 
 .carousel {
     height: 87vh;
@@ -99,7 +91,7 @@ main h1 {
     display: flex;
 }
 
-#overlay-text-border{
+.overlay-text-border{
     padding: 28% 10%;
 }
  
@@ -268,7 +260,7 @@ main h1 {
 
 
 /* Cards */
-#container-cards{
+.container-cards{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -283,12 +275,12 @@ main h1 {
     margin-bottom: 5%;
 }
 
-#secao-cards{
+.secao-cards{
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Pode precisar de wrap em telas menores */
-    flex-wrap: wrap; /* Adicionado para melhor responsividade */
-    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .card{
@@ -298,13 +290,13 @@ main h1 {
     background-color: white;
     color: black;
     /* width: 20%; */ /* Alterado para ser mais responsivo */
-    flex-basis: calc(25% - 20px); /* Base para 4 cards, ajustando pelo gap */
-    min-width: 280px; /* Largura mínima para cada card */
-    height: auto; /* Altura automática para acomodar conteúdo variável */
-    min-height: 600px; /* Mantém uma altura mínima, mas permite expandir */
+    flex-basis: calc(25% - 20px); 
+    min-width: 280px; 
+    height: auto; 
+    min-height: 600px; 
     padding: 2%;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave para os cards */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 .card img{
@@ -323,12 +315,12 @@ main h1 {
 }
 
 .card p{
-    font-size: 16px; /* Tamanho de fonte ligeiramente menor para mais texto */
-    font-family: sans-serif; /* Inter ou sans-serif aqui? */
+    font-size: 16px; 
+    font-family: sans-serif; 
     text-align: justify;
-    line-height: 1.6; /* Melhor legibilidade */
-    padding: 0 10px 10px; /* Padding para o parágrafo */
-    color: #333; /* Cor de texto mais escura para melhor contraste no branco */
+    line-height: 1.6; 
+    padding: 0 10px 10px;
+    color: #333; 
 }
 
 #container-quiz{
@@ -546,15 +538,95 @@ main h1 {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
 }
 
+/* Contato */
+.fundo-imagem{
+    background-color: black;
+}
+
+.img-fundo{
+    background: url(../assets/bombeirosBack.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 87vh;
+    margin-top: 2px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#contatos-titulo{
+    color: white;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-size: 46px;
+    margin-bottom: 5%;
+}
+
+.telefone-contato{
+    display: flex;
+    justify-content: center;
+    background-color: #7EBAFF;
+    padding: 50px;
+    width: 100%;
+}
+
+/* Sobre */
+#img-sobre{
+    background-image: url(../assets/enchenteSobre.jpg);
+    background-color: black;
+}
+
+#sobre-container{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0% 10% 5%;
+}
+
+#sobre-container h1{
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    font-size: 46px;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 5% 5% 2%;
+    color: black; /* Garante que o H1 aqui seja preto, pois o padrão do body foi mudado para branco */
+}
+
+#sobre-conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#sobre-conteudo p{
+    flex: 2;
+    margin: 5%;
+    text-align: left;
+    font-family: sans-serif; /* Inter ou sans-serif aqui? */
+    line-height: 1.8;
+    color: black; /* Garante a cor do texto */
+}
+
+#sobre-conteudo img{
+    flex: 2;
+    border-radius: 5px;
+}
+
 /* Rodapé */
 footer{
     padding: 20.5px;
     background: #7EBAFF;
-    text-align: center; /* Centraliza o texto do rodapé */
+    text-align: center; 
 }
 
 footer p{
-    color: #015486; /* Cor de texto que contrasta bem com o fundo do rodapé */
+    color: #015486;
     font-family: "Inter", sans-serif;
     font-size: 14px;
 }
