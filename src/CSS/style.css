@@ -57,15 +57,6 @@ header nav li a:hover{
     font-size: 20px;
 }
 
-main h1 {
-    font-family: "Inter", sans-serif;
-    color: white;
-    font-size: 32px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 25px; 
-}
-
 #map {
     height: 65vh;
     width: 100%;    
@@ -100,6 +91,7 @@ main h1 {
     font-family: "Inter", sans-serif;
     font-size: 4rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .overlay p{
@@ -312,6 +304,7 @@ main h1 {
     font-size: 1.5rem; /* Ajuste no tamanho do título do card */
     padding: 5% 5% 8%; /* Ajuste no padding */
     text-align: center;
+    text-transform: uppercase;
 }
 
 .card p{
@@ -528,7 +521,25 @@ main h1 {
     font-size: 1.4rem;
   }
 
-  #map {
+/* Mapa */
+#mapa-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#mapa-container h1{
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 55px;     
+}
+
+#map {
     height: 65vh;   
     width: 100%;    
     max-width: 1200px; 
@@ -568,6 +579,7 @@ main h1 {
     background-color: #7EBAFF;
     padding: 50px;
     width: 100%;
+    border-radius: 6px;
 }
 
 /* Sobre */
