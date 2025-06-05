@@ -735,11 +735,32 @@ body.dark-mode {
     color: white;
 }
 
+/* Modo escuro - pagina contato */
+.dark-mode .telefone-contato{
+    background-color: #015486;
+    color: white;
+}
+
+.dark-mode #sobre-container{
+    background-color: #12111D;
+}
+
+.dark-mode #sobre-container h1{
+    color: white;
+}
+
+.dark-mode #sobre-container p{
+    color: white;
+}
+
 .dark-mode footer{
     background-color: #015486;
 }
 
 .dark-mode footer p{
-    color: white;
+    color: #7EBAFF;
 }
+
+
+
 

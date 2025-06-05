@@ -1,3 +1,7 @@
+// Botão de dark mode
+const toggleButton = document.getElementById('toggle-dark-mode');
+const icon = document.getElementById('icon-theme');
+
 const carousel = document.getElementById('carousel');
 
 // Imagens de fundo
@@ -6,10 +10,6 @@ const backgrounds = [
   'url(../../src/assets/enchente2.jpg)',
   'url(../../src/assets/enchente3.jpg)'
 ];
-
-// Botão de dark mode
-const toggleButton = document.getElementById('toggle-dark-mode');
-const icon = document.getElementById('icon-theme');
 
 let current = 0;
 
@@ -29,13 +29,6 @@ function prevSlide() {
   current = (current - 1 + backgrounds.length) % backgrounds.length;
   showSlide(current);
 }
-
-// Mudar automaticamente a cada 5 segundos
-setInterval(nextSlide, 5000);
-
-// Mostrar o primeiro slide ao carregar
-showSlide(current);
-
 
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
@@ -60,3 +53,11 @@ window.addEventListener('load', () => {
     document.body.classList.add('dark-mode');
   }
 });
+
+// Mudar automaticamente a cada 5 segundos
+setInterval(nextSlide, 5000);
+
+// Mostrar o primeiro slide ao carregar
+showSlide(current);
+
+
