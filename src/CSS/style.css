@@ -646,7 +646,7 @@ header{
     background-color: black;
 }
 
-#sobre-container{
+.sobre-container{
     background-color: white;
     color: black;
     display: flex;
@@ -656,7 +656,23 @@ header{
     padding: 0% 10% 5%;
 }
 
-#sobre-container h1{
+#sobre-direita{
+    background: none;
+}
+
+#sobre-direita h1{
+    color: white;
+}
+
+#sobre-direita p{
+    color: white;
+}
+
+#sobre-esquerda{
+    background-color: #7EBAFF;
+}
+
+.sobre-container h1{
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
     font-size: 46px;
@@ -666,7 +682,7 @@ header{
     color: black; /* Garante que o H1 aqui seja preto, pois o padrão do body foi mudado para branco */
 }
 
-#sobre-conteudo{
+.sobre-conteudo{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -674,7 +690,7 @@ header{
     height: 100%;
 }
 
-#sobre-conteudo p{
+.sobre-conteudo p{
     flex: 2;
     margin: 5%;
     text-align: left;
@@ -684,7 +700,7 @@ header{
     color: black; /* Garante a cor do texto */
 }
 
-#sobre-conteudo img{
+.sobre-conteudo img{
     flex: 2;
     border-radius: 5px;
 }
@@ -779,15 +795,19 @@ body.dark-mode {
     color: white;
 }
 
-.dark-mode #sobre-container{
+.dark-mode .sobre-container{
     background-color: #12111D;
 }
 
-.dark-mode #sobre-container h1{
+.dark-mode #sobre-esquerda{
+    background-color: #015486;
+}
+
+.dark-mode .sobre-container h1{
     color: white;
 }
 
-.dark-mode #sobre-container p{
+.dark-mode .sobre-container p{
     color: white;
 }
 

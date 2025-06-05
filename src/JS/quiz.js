@@ -1,212 +1,249 @@
-  // Questions array - each has question text and answers mapped to cars
-  const questions = [
-    {
-      question: "O que é uma enchente?",
-      answers: [
-        { text: "Uma erupção de um vulcão próximo a rios", car: "EQE" },
-        { text: "Um tremor de terra causado por excesso de água", car: "BYD" },
-        { text: "O transbordamento de rios ou acúmulo de água em áreas urbanas", car: "HONDA" },
-        { text: "O acúmulo excessivo de água que provoca alagamentos", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Qual dos fatores a seguir contribui para o aumento das enchentes nas cidades?",
-      answers: [
-        { text: "Preservação de florestas", car: "EQE" },
-        { text: "Uso de energia solar", car: "BYD" },
-        { text: "Impermeabilização do solo por asfalto e concreto", car: "HONDA" },
-        { text: "Construção de poços artesianos", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Qual é uma das principais consequências de uma enchente?",
-      answers: [
-        { text: "Melhoria da agricultura urbana", car: "EQE" },
-        { text: "Aumento da biodiversidade local", car: "BYD" },
-        { text: "Geração de energia limpa", car: "HONDA" },
-        { text: "Danos materiais e riscos à saúde pública", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Como a população pode ajudar a evitar enchentes nas cidades?",
-      answers: [
-        { text: "Jogando lixo nas ruas para facilitar o escoamento", car: "EQE" },
-        { text: "Lavando calçadas com mangueiras", car: "BYD" },
-        { text: "Não jogando lixo em bueiros e córregos", car: "HONDA" },
-        { text: "Construindo casas sobre rios", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Que infraestrutura ajuda no controle de enchentes em áreas urbanas?",
-      answers: [
-        { text: "Casas flutuantes", car: "EQE" },
-        { text: "Sistemas de drenagem pluvial eficientes", car: "BYD" },
-        { text: "Linhas de transmissão elétrica", car: "HONDA" },
-        { text: "Túneis subterrâneos para pedestres", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Em que época do ano ocorrem mais enchentes no Brasil?",
-      answers: [
-        { text: "Inverno", car: "EQE" },
-        { text: "Outono", car: "BYD" },
-        { text: "Verão", car: "HONDA" },
-        { text: "Primavera", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Qual órgão brasileiro é responsável por monitorar e alertar sobre riscos de desastres naturais, como enchentes?",
-      answers: [
-        { text: "IBGE", car: "EQE" },
-        { text: "Defesa Civil", car: "BYD" },
-        { text: "INSS", car: "HONDA" },
-        { text: "Receita Federal", car: "TESLA" },
-      ],
-    },
-    {
-      question: "O que é alagamento urbano?",
-      answers: [
-        { text: "Aumento da maré que atinge zonas costeiras", car: "EQE" },
-        { text: "Apenas o transbordamento de rios", car: "BYD" },
-        { text: "Acúmulo de água da chuva por falta de escoamento adequado", car: "HONDA" },
-        { text: "Fenômeno de seca extrema nas cidades", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Uma forma natural de reduzir o impacto das enchentes é:",
-      answers: [
-        { text: "Construir mais prédios nas margens dos rios", car: "EQE" },
-        { text: "Desmatar áreas de várzea", car: "BYD" },
-        { text: "Canalizar todos os rios da cidade", car: "HONDA" },
-        { text: "Preservar matas ciliares e áreas verdes", car: "TESLA" },
-      ],
-    },
-    {
-      question: "Qual destes problemas pode ocorrer após uma enchente?",
-      answers: [
-        { text: "Aumento da produção agrícola", car: "EQE" },
-        { text: "Restauração automática das ruas", car: "BYD" },
-        { text: "Disseminação de doenças como leptospirose", car: "HONDA" },
-        { text: "Crescimento da economia local", car: "TESLA" },
-      ],
-    },
-  ];
- 
-  const startBtn = document.getElementById('start-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const questionContainer = document.getElementById('question-container');
-  const answerButtons = document.getElementById('answer-buttons');
-  const resultContainer = document.getElementById('result-container');
-  const resultDiv = document.getElementById('result');
-  const startContainer = document.getElementById('start-container');
- 
-  let currentQuestionIndex = 0;
-  let scores = { EQE: 0, BYD: 0, HONDA: 0, TESLA: 0 };
-  let selectedAnswer = null;
- 
-  startBtn.addEventListener('click', startQuiz);
-  nextBtn.addEventListener('click', () => {
-    if (selectedAnswer !== null) {
-      // Increment score of previously selected answer
-      scores[selectedAnswer]++;
-      selectedAnswer = null;
-      currentQuestionIndex++;
-      setNextQuestion();
-    }
+// Questions array - each has question text, answers, and the correct answer index
+const questions = [
+  {
+    question: "O que é uma enchente?",
+    answers: [
+      { text: "Uma erupção de um vulcão próximo a rios" },
+      { text: "Um tremor de terra causado por excesso de água" },
+      { text: "O transbordamento de rios ou acúmulo de água em áreas urbanas" },
+      { text: "O acúmulo excessivo de água que provoca alagamentos" },
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    question: "Qual dos fatores a seguir contribui para o aumento das enchentes nas cidades?",
+    answers: [
+      { text: "Preservação de florestas" },
+      { text: "Uso de energia solar" },
+      { text: "Impermeabilização do solo por asfalto e concreto" },
+      { text: "Construção de poços artesianos" },
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    question: "Qual é uma das principais consequências de uma enchente?",
+    answers: [
+      { text: "Melhoria da agricultura urbana" },
+      { text: "Aumento da biodiversidade local" },
+      { text: "Geração de energia limpa" },
+      { text: "Danos materiais e riscos à saúde pública" },
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    question: "Como a população pode ajudar a evitar enchentes nas cidades?",
+    answers: [
+      { text: "Jogando lixo nas ruas para facilitar o escoamento" },
+      { text: "Lavando calçadas com mangueiras" },
+      { text: "Não jogando lixo em bueiros e córregos" },
+      { text: "Construindo casas sobre rios" },
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    question: "Que infraestrutura ajuda no controle de enchentes em áreas urbanas?",
+    answers: [
+      { text: "Casas flutuantes" },
+      { text: "Sistemas de drenagem pluvial eficientes" },
+      { text: "Linhas de transmissão elétrica" },
+      { text: "Túneis subterrâneos para pedestres" },
+    ],
+    correctAnswerIndex: 1,
+  },
+  {
+    question: "Em que época do ano ocorrem mais enchentes no Brasil, de forma geral (considerando as regiões com maior incidência)?",
+    answers: [
+      { text: "Inverno" },
+      { text: "Outono" },
+      { text: "Verão" },
+      { text: "Primavera" },
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    question: "Qual órgão brasileiro é responsável por monitorar e alertar sobre riscos de desastres naturais, como enchentes?",
+    answers: [
+      { text: "IBGE (Instituto Brasileiro de Geografia e Estatística)" },
+      { text: "Defesa Civil (Nacional, Estadual ou Municipal) e CEMADEN" },
+      { text: "INSS (Instituto Nacional do Seguro Social)" },
+      { text: "Receita Federal" },
+    ],
+    correctAnswerIndex: 1,
+  },
+  {
+    question: "O que é alagamento urbano?",
+    answers: [
+      { text: "Aumento da maré que atinge zonas costeiras" },
+      { text: "Apenas o transbordamento de rios" },
+      { text: "Acúmulo de água da chuva por falta de escoamento adequado" },
+      { text: "Fenômeno de seca extrema nas cidades" },
+    ],
+    correctAnswerIndex: 2,
+  },
+  {
+    question: "Uma forma natural de reduzir o impacto das enchentes é:",
+    answers: [
+      { text: "Construir mais prédios nas margens dos rios" },
+      { text: "Desmatar áreas de várzea" },
+      { text: "Canalizar todos os rios da cidade" },
+      { text: "Preservar matas ciliares e áreas verdes" },
+    ],
+    correctAnswerIndex: 3,
+  },
+  {
+    question: "Qual destes problemas pode ocorrer após uma enchente?",
+    answers: [
+      { text: "Aumento da produção agrícola na área afetada" },
+      { text: "Restauração automática das ruas pela água" },
+      { text: "Disseminação de doenças como leptospirose" },
+      { text: "Crescimento imediato da economia local" },
+    ],
+    correctAnswerIndex: 2,
+  },
+];
+
+// DOM Elements
+const startBtn = document.getElementById('start-btn');
+const nextBtn = document.getElementById('next-btn');
+const questionContainer = document.getElementById('question-container');
+const answerButtonsContainer = document.getElementById('answer-buttons');
+const resultContainer = document.getElementById('result-container');
+const resultDiv = document.getElementById('result');
+const startContainer = document.getElementById('start-container');
+const questionTextElement = document.getElementById('question');
+const restartBtn = document.getElementById('restart-btn');
+
+
+// Quiz State
+let currentQuestionIndex = 0;
+let score = 0;
+let selectedButton = null;
+
+// Event Listeners
+startBtn.addEventListener('click', startQuiz);
+nextBtn.addEventListener('click', handleNextQuestion); // Chamada direta para handleNextQuestion
+restartBtn.addEventListener('click', restartQuiz);
+
+// Functions
+function startQuiz() {
+  startContainer.classList.add('hidden');
+  resultContainer.classList.add('hidden');
+  questionContainer.classList.remove('hidden');
+  nextBtn.classList.remove('hidden'); // Mostrar o botão Próxima
+  nextBtn.textContent = 'Próxima Pergunta'; // Resetar texto do botão
+  currentQuestionIndex = 0;
+  score = 0;
+  selectedButton = null;
+  setNextQuestion();
+}
+
+function restartQuiz() {
+  resultContainer.classList.add('hidden');
+  startContainer.classList.remove('hidden');
+  nextBtn.classList.add('hidden');
+}
+
+function setNextQuestion() {
+  resetState();
+  showQuestion(questions[currentQuestionIndex]);
+}
+
+function showQuestion(questionObj) {
+  questionTextElement.textContent = questionObj.question;
+  questionObj.answers.forEach((answer, index) => {
+    const button = document.createElement('button');
+    button.classList.add('answer');
+    button.textContent = answer.text;
+    button.dataset.index = index;
+    button.addEventListener('click', selectAnswer);
+    answerButtonsContainer.appendChild(button);
   });
- 
-  function startQuiz() {
-    startContainer.classList.add('hidden');
-    questionContainer.classList.remove('hidden');
-    currentQuestionIndex = 0;
-    scores = { EQE: 0, BYD: 0, HONDA: 0, TESLA: 0 };
-    selectedAnswer = null;
-    nextBtn.disabled = true;
-    setNextQuestion();
+}
+
+function resetState() {
+  nextBtn.disabled = true; // Desabilitar até uma resposta ser selecionada
+  selectedButton = null;
+  answerButtonsContainer.dataset.answered = 'false'; // Resetar marcação de respondida
+  while (answerButtonsContainer.firstChild) {
+    answerButtonsContainer.removeChild(answerButtonsContainer.firstChild);
   }
- 
-  function setNextQuestion() {
-    resetState();
-    if (currentQuestionIndex >= questions.length) {
-      showResult();
-      return;
-    }
-    showQuestion(questions[currentQuestionIndex]);
+}
+
+function selectAnswer(e) {
+  const newlySelectedButton = e.target;
+
+  // Desmarcar o botão anteriormente selecionado, se houver
+  if (selectedButton) {
+    selectedButton.classList.remove('selected-answer');
+    // Reverta aqui os estilos específicos que você aplicou para seleção
+    selectedButton.style.backgroundColor = ''; // Exemplo: cor padrão do botão
+    selectedButton.style.color = '';      // Exemplo: cor padrão do texto
+    selectedButton.style.borderBottom = '';
   }
- 
-  function showQuestion(questionObj) {
-    document.getElementById('question').textContent = questionObj.question;
-    questionObj.answers.forEach(answer => {
-      const button = document.createElement('button');
-      button.classList.add('answer');
-      button.textContent = answer.text;
-      button.dataset.car = answer.car;
-      button.addEventListener('click', selectAnswer);
-      answerButtons.appendChild(button);
-    });
-  }
- 
-  function resetState() {
-    nextBtn.disabled = true;
-    // Remove all answer buttons
-    while (answerButtons.firstChild) {
-      answerButtons.removeChild(answerButtons.firstChild);
-    }
-    selectedAnswer = null;
-  }
- 
-  function selectAnswer(e) {
-    const chosenCar = e.target.dataset.car;
- 
-    // Unselect all other buttons
-    Array.from(answerButtons.children).forEach(button => {
-      button.style.backgroundColor = '#7EBAFF';
-      button.style.color = '#3895ff';
-      button.style.borderBottom = '1px solid #3895ff';
-    });
- 
-    // Highlight selected button
-    e.target.style.backgroundColor = '#3895ff';
-    e.target.style.color = 'white';
-    e.target.style.borderBottom = '1px solid #7EBAFF';
- 
-    selectedAnswer = chosenCar;
-    nextBtn.disabled = false;
-  }
- 
-  function showResult() {
-    questionContainer.classList.add('hidden');
-    resultContainer.classList.remove('hidden');
- 
-    let maxScore = -1;
-    let bestCars = [];
-    for (const car in scores) {
-      if (scores[car] > maxScore) {
-        maxScore = scores[car];
-        bestCars = [car];
-      } else if (scores[car] === maxScore) {
-        bestCars.push(car);
+
+  // Marcar o novo botão selecionado
+  newlySelectedButton.classList.add('selected-answer');
+  // Aplique aqui os estilos para o botão selecionado
+  newlySelectedButton.style.backgroundColor = '#3895ff'; // Exemplo: azul para selecionado
+  newlySelectedButton.style.color = 'white';
+  newlySelectedButton.style.borderBottom = '1px solid #7EBAFF';
+
+
+  selectedButton = newlySelectedButton;
+  nextBtn.disabled = false; // Habilitar o botão "Próxima"
+}
+
+function handleNextQuestion() {
+  if (!selectedButton) return; // Segurança: não fazer nada se nenhum botão foi selecionado
+
+  const selectedIndex = parseInt(selectedButton.dataset.index);
+  const correctAnswerIndex = questions[currentQuestionIndex].correctAnswerIndex;
+
+  // Verificar se a resposta selecionada é a correta
+  if (selectedIndex === correctAnswerIndex) {
+    score++;
+    selectedButton.classList.add('correct-answer');
+    selectedButton.style.backgroundColor = '#28a745'; // Verde para correto
+    selectedButton.style.color = 'white';
+  } else {
+    selectedButton.classList.add('wrong-answer');
+    selectedButton.style.backgroundColor = '#dc3545'; // Vermelho para incorreto
+    selectedButton.style.color = 'white';
+
+    // Opcional: Destacar a resposta correta se o usuário errou
+    Array.from(answerButtonsContainer.children).forEach(button => {
+      if (parseInt(button.dataset.index) === correctAnswerIndex) {
+        button.classList.add('correct-answer'); // Adiciona a classe para o CSS
+        button.style.backgroundColor = '#28a745'; // Verde para correto
+        button.style.color = 'white';
       }
-    }
- 
-    let resultHTML = "";
-    if (bestCars.length === 1) {
-      const carKey = bestCars[0];
-      resultHTML = `<div>O carro ideal para você é: <span id="car-name">${cars[carKey].name}</span></div>
-                    <div id="car-description">${cars[carKey].description}</div>`;
-    } else {
-      resultHTML = `<div>Você combinou com mais de um carro! Veja suas opções:</div>`;
-      bestCars.forEach(carKey => {
-        resultHTML += `<div style="margin-top: 15px;font-weight: 700; color:#28a745;">${cars[carKey].name}</div>
-                       <div>${cars[carKey].description}</div>`;
-      });
-    }
- 
-    resultDiv.innerHTML = resultHTML;
+    });
   }
- 
-  document.getElementById('restart-btn').addEventListener('click', () => {
-    resultContainer.classList.add('hidden');
-    startContainer.classList.remove('hidden');
+
+  // Desabilitar todos os botões de resposta para a pergunta atual
+  Array.from(answerButtonsContainer.children).forEach(button => {
+    button.disabled = true;
   });
- 
+  answerButtonsContainer.dataset.answered = 'true'; // Marcar que a pergunta foi respondida
+
+  currentQuestionIndex++; // Incrementar para a próxima pergunta
+
+  if (currentQuestionIndex < questions.length) {
+    // Ainda há perguntas
+    setNextQuestion(); // Configurar a próxima pergunta
+  } else {
+    // Fim do quiz
+    showResult();
+  }
+}
+
+function showResult() {
+  questionContainer.classList.add('hidden');
+  nextBtn.classList.add('hidden'); // Esconder o botão Próxima na tela de resultado
+  resultContainer.classList.remove('hidden');
+  resultDiv.innerHTML = `Você acertou <span id="score">${score}</span> de <span id="total-questions">${questions.length}</span> perguntas!`;
+}
+
+// Configuração inicial
+nextBtn.classList.add('hidden'); // Ocultar o botão Próxima inicialmente
+
