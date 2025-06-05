@@ -15,19 +15,39 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    padding: 20px 0px 20px 50px;
     background: none;
     border-bottom: solid 1px #7EBAFF;
     align-items: center;
 }
 
-header nav ul{
+#toggle-dark-mode{
+    background: none;
+    border: none;
+    width: 5%;
+    cursor: pointer;
+}
+
+#toggle-dark-mode img{
+    width: 70%;
+    height: 90%;
+}
+
+#list-header{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 30px;
+    padding: 0px 50px 0px 0px;
+}
+
+#list-header nav ul{
     display: flex;
     gap: 30px;
     list-style: none;
 }
 
-header nav li a{
+#list-header nav li a{
     color: #7EBAFF; 
     font-family: "Inter", sans-serif;
     font-size: 14px;
@@ -35,7 +55,7 @@ header nav li a{
     text-transform: uppercase;
 }
 
-header nav li a:hover{
+#list-header nav li a:hover{
     color: white;
     transform: scale(1.2);
 }
@@ -153,7 +173,8 @@ header nav li a:hover{
 #projeto-conteudo p{
     flex: 2;
     margin: 5%;
-    text-align: left;
+    text-align: justify;
+    font-size: 24px;
     font-family: sans-serif; /* Inter ou sans-serif aqui? */
     line-height: 1.8;
     color: black; /* Garante a cor do texto */
@@ -641,5 +662,84 @@ footer p{
     color: #015486;
     font-family: "Inter", sans-serif;
     font-size: 14px;
+}
+
+/* Modo escuro */
+body.dark-mode {
+  background: #002135;
+  color: white;
+}
+
+.dark-mode header {
+  border-bottom: solid 1px #7EBAFF;
+  color: #7EBAFF;
+}
+
+.dark-mode #projeto-container{
+    background-color: #12111D;
+}
+
+.dark-mode #projeto-container h1{
+    color: white;
+}
+
+.dark-mode #projeto-container p{
+    color: white;
+}
+
+.dark-mode #secao-direita3{
+    background-color: #12111D;
+}
+
+.dark-mode #secao-direita3 h1{
+    color: white;
+}
+
+.dark-mode #secao-direita3 p{
+    color: white;
+}
+
+.dark-mode #secao-direita5{
+    background-color: #015486;
+}
+
+.dark-mode #secao-direita5 h1{
+    color: white;
+}
+
+.dark-mode #secao-direita5 p{
+    color: white;
+}
+
+.dark-mode #secao-esquerda6{
+    background-color: #12111D;
+}
+
+.dark-mode #secao-esquerda6 h1{
+    color: white;
+}
+
+.dark-mode #secao-esquerda6 p{
+    color: white;
+}
+
+.dark-mode .card{
+    background-color: #12111D;
+}
+
+.dark-mode .card h1{
+    color: white;
+}
+
+.dark-mode .card p{
+    color: white;
+}
+
+.dark-mode footer{
+    background-color: #015486;
+}
+
+.dark-mode footer p{
+    color: white;
 }
 

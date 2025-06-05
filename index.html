@@ -13,14 +13,17 @@
     <header>
         <h1 id="logo"> Flood<span id="mark">less</span> </h1>
         <h1 id="titlPag">HOME</h1>
-        <nav>
-            <ul>
-                <li><a href="./src/pages/mapa.html">mapa</a></li>
-                <li><a href="./src/pages/contatos.html">contatos</a></li>
-                <li><a href="./src/pages/sobre.html">sobre</a></li>
-                <li><a href="./src/pages/quiz.html">quiz</a></li>
-            </ul>
-        </nav>
+        <div id="list-header">
+            <nav>
+                <ul>
+                    <li><a href="./src/pages/mapa.html">mapa</a></li>
+                    <li><a href="./src/pages/contatos.html">contatos</a></li>
+                    <li><a href="./src/pages/sobre.html">sobre</a></li>
+                    <li><a href="./src/pages/quiz.html">quiz</a></li>
+                </ul>
+            </nav>
+            <button id="toggle-dark-mode"><img id="icon-theme" src="./src/assets/luaIcon.png" alt="Modo escuro"></button>
+        </div>    
     </header>
     <main id="container">
         <div class="carousel" id="carousel">
@@ -29,10 +32,9 @@
             <div class="overlay">
                 <div class="overlay-text-border">
                     <div class="overlay-text">
-                        <h1>ENCHENTES</h1>
+                        <h1>floodless</h1>
                         <p> 
-                        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."  
+                        Plataforma Web de Conscientização e Alerta de Enchentes para São Paulo
                         </p>
                     </div>
                 </div>
@@ -41,23 +43,12 @@
         <div id="projeto-container">
             <h1>Sobre o Projeto</h1>
             <div id="projeto-conteudo">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis ex, 
-                pellentesque vel lacinia eu, lobortis vitae eros. Quisque faucibus, nunc in faucibus vulputate,
-                quam tortor mattis libero, id vehicula velit dui ut erat. Ut quis rutrum justo. 
-                Nullam volutpat malesuada sodales. Donec nunc massa, vulputate eu commodo ac, laoreet ac velit. 
-                Pellentesque nibh ligula, tincidunt at tincidunt ut, cursus vel metus.
-                Nullam efficitur sollicitudin porttitor. Ut blandit enim at condimentum vehicula. Maecenas finibus, 
-                ante vitae egestas tincidunt, sapien nunc lobortis eros, ut aliquam risus ante sed elit. Morbi ac enim ipsum. 
-                Curabitur at magna quis massa pharetra eleifend.
-                Aenean vulputate lectus sed dolor elementum, a finibus dui viverra. 
-                Proin dui neque, pellentesque eget gravida aliquet, sagittis a mauris. 
-                Nunc eu enim eget orci pharetra molestie a quis risus. Duis scelerisque erat quam, 
-                sed ullamcorper ante ullamcorper vitae. Quisque ut lacinia turpis. Fusce maximus semper neque, 
-                ac pretium velit dignissim at. Ut at ligula id diam elementum consectetur. Sed id nisl vestibulum, 
-                malesuada ante vitae, mollis neque. Etiam elementum, arcu eget fringilla aliquam, 
-                ex nibh accumsan tortor, ac tempor orci eros vel enim. Donec vel nulla nec nulla aliquam porta. 
-                In hac habitasse platea dictumst. Donec condimentum elit mauris, feugiat commodo sem interdum nec. 
-                Praesent iaculis urna eu enim ultrices, nec ornare nulla facilisis.
+                <p> A plataforma "Floodless" é uma solução web robusta e intuitiva, focada em capacitar os
+                    cidadãos e as comunidades da cidade de São Paulo com informações cruciais sobre os riscos
+                    de enchentes. Nosso objetivo é mitigar os impactos desses eventos extremos, que afetam
+                    recorrentemente diversas áreas da metrópole, através da conscientização, educação
+                    interativa, mapeamento claro de áreas vulneráveis e emissão de alertas em tempo real
+                    especícos para a capital paulista.
                 </p>
                 <img src="./src/assets/Flood.png" alt="logoProjeto">
             </div>
@@ -213,16 +204,14 @@
                     <img src="./src/assets/html5.png" alt="html">
                     <h1>HTML</h1>
                     <p>
-                        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                        Linguagem de marcação de texto, utilizada para a construção das paginas do site.
                     </p>
                 </div>
                 <div class="card">
                     <img src="./src/assets/css.png" alt="html">
                     <h1>CSS</h1>
                     <p>
-                        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                        Linguagem usada para a estilização das paginas.
                     </p>
                 </div>
                 <div class="card">
@@ -237,8 +226,7 @@
                     <img src="./src/assets/figmaLogo.png" alt="html">
                     <h1>Figma</h1>
                     <p>
-                        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+                        Ferramenta utilizada para a prototipação da pagina.
                     </p>
                 </div>
             </div>
