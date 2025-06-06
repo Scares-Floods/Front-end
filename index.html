@@ -6,22 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/CSS/style.css">
     <link rel="shortcut icon" href="./src/assets/FloodTit.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
     <title>FloodLess - Home</title>
 </head>
 
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1 id="logo"> Flood<span id="mark">less</span> </h1>
         <h1 id="titlPag">HOME</h1>
         <div id="list-header">
-            <nav>
-                <ul>
-                    <li><a href="./src/pages/mapa.html">mapa</a></li>
-                    <li><a href="./src/pages/contatos.html">contatos</a></li>
-                    <li><a href="./src/pages/sobre.html">sobre</a></li>
-                    <li><a href="./src/pages/quiz.html">quiz</a></li>
-                </ul>
-            </nav>
+            <span  id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu
+                <nav id="itens">
+                    <ul>
+                        <li><a href="./src/pages/mapa.html">mapa</a></li>
+                        <li><a href="./src/pages/contatos.html">contatos</a></li>
+                        <li><a href="./src/pages/sobre.html">sobre</a></li>
+                        <li><a href="./src/pages/quiz.html">quiz</a></li>
+                    </ul>
+                </nav>
+            </span>
             <button id="toggle-dark-mode"><img id="icon-theme" src="./src/assets/luaIcon.png" alt="Modo escuro"></button>
         </div>    
     </header>

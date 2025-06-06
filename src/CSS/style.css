@@ -20,6 +20,10 @@ header{
     border-bottom: solid 1px #7EBAFF;
     align-items: center;
 }
+
+#burguer{
+    display: none;
+}
  
 #toggle-dark-mode{
     background: none;
@@ -37,7 +41,8 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 400px;
+    height: 100%;
     gap: 30px;
     padding: 0px 40px 0px 0px;
 }
@@ -76,6 +81,7 @@ header{
     color: white;
     font-family: "Inter", sans-serif;
     font-size: 20px;
+    padding: 0% 0% 0% 10%;
 }
  
 #map {
@@ -100,12 +106,11 @@ header{
 .overlay {
     background-color: rgba(0, 0, 0, 0.4);
     height: 100%;
-    display: flex;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
  
-.overlay-text-border{
-    padding: 28% 10%;
-}
  
 .overlay h1 {
     color: white;
@@ -113,6 +118,7 @@ header{
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
  
 .overlay p{
@@ -590,7 +596,7 @@ header{
     border-radius: 5px;
     border-top: none;
     padding: 5px 15px;
-    width: 20%;
+    width: 35%;
 }
  
 #descricao-mapa button{
@@ -819,13 +825,11 @@ body.dark-mode {
     color: #7EBAFF;
 }
  
-/******************************************/
-/* ESTILOS RESPONSIVOS           */
-/* (Adicione este bloco ao final do CSS)  */
-/******************************************/
+
  
-/* Para telas de até 1024px (Tablets) */
+
 @media (max-width: 1024px) {
+
     /* Ajustes gerais de espaçamento e fontes */
     .secao-direita, .secao-esquerda, #projeto-container, .sobre-container {
         padding: 5% 5%;
@@ -854,9 +858,26 @@ body.dark-mode {
 @media (max-width: 768px) {
     /* Cabeçalho */
     header {
-        flex-direction: column;
+        flex-direction: row;
         padding: 20px 15px;
         gap: 20px;
+    }
+
+    #titlPag{
+        display: none;
+    }
+
+    #burguer{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        border: 1px solid white;
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    #itens{
+        display: none;
     }
  
     #list-header {
@@ -864,11 +885,26 @@ body.dark-mode {
         padding: 0;
         justify-content: center;
     }
+
+    #list-header nav{
+        padding: 8px 10px;
+        background: none;
+        border-radius: 5px;
+    }
    
     #list-header nav ul {
-        gap: 15px; /* Reduz o espaço entre os links */
-        flex-wrap: wrap; /* Permite que os links quebrem a linha */
+        display: flex;
+        flex-direction: column;
+        background: none;
+        gap: 20px; 
+        flex-wrap: wrap; 
         justify-content: center;
+    }
+
+    #list-header nav li{
+ 
+        text-align: center;
+        border-bottom: 1px solid #00619d;
     }
  
     /* Conteúdo em colunas passa a ser empilhado */
